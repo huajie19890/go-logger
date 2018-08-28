@@ -31,8 +31,9 @@ LoggerRecord |   维护日志每行记录数据<br>
 
 #### 三、例子
 ```
-logObj := go_logger.LogInit("demo1")<br>
-logObj.Error("errmsg","xxxdsfd")<br>
+logObj := go_logger.LogInit("demo1")
+logObj.Error("errmsg","xxxdsfd")
 ````
-1、demo1是go-logger/config/log_conf.toml中配置，来初始Logger，无则通过LogConfig完成实例化<br>
-2、调用关系logObj.Error("xxx") --> Logf() --> logObj.Logger.Write(rec LoggerRecord)<br>
+1、"demo1"是go-logger/config/log_conf.toml中配置，通过配置来初始Logger，无配置则通过默认的LogConfig完成实例化<br>
+2、go_logger.LogInit("demo1")完成了日志的句柄的初始化，通过map维护在内存中
+3、logObj.Error("xxx")调用关系为:logObj.Error("xxx") --> Logf() --> logger.Choose[levelSwitch].LogWriterObj.LogWrite(rec LoggerRecord)<br>
