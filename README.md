@@ -35,5 +35,9 @@ logObj := go_logger.LogInit("demo1")
 logObj.Error("errmsg","xxxdsfd")
 ````
 1、"demo1"是go-logger/config/log_conf.toml中配置，通过配置来初始Logger，无配置则通过默认的LogConfig完成实例化<br>
-2、go_logger.LogInit("demo1")完成了日志的句柄的初始化，通过map维护在内存中
+2、go_logger.LogInit("demo1")完成了日志的句柄的初始化，通过map维护在内存中<br>
 3、logObj.Error("xxx")调用关系为:logObj.Error("xxx") --> Logf() --> logger.Choose[levelSwitch].LogWriterObj.LogWrite(rec LoggerRecord)<br>
+
+
+#### 有问题及时反馈: huajie19890209@163.com
+
