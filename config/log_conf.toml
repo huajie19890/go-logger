@@ -1,0 +1,36 @@
+[[logconfig]]
+# 日志文件名字&产品线名字&模块名字
+LogConfName = "demo1"
+# 日志存放路径
+LogPath = "./../log"
+# 备份（切割）单位
+RotateRate = "h"
+# 备份（分割）保留数pwd
+RotateCount = 48
+# 日志等级
+LevelStr = "INFO"
+# 日志中msg key=value
+Separator = "="
+# 是否将日志内容同步输出到终端
+Stdout = true
+# 打印栈追踪的深度，0表示不追踪调用
+SkipCaller = 0
+
+
+[[logconfig]]
+# 日志文件名字&产品线名字&模块名字
+LogConfName = "dblog"
+# 日志存放路径
+LogPath = "./"
+# 备份（切割）单位
+RotateRate = "h"
+# 备份（分割）保留数
+RotateCount = 48
+# 日志等级
+LevelStr = "INFO"
+# 日志中msg key=value
+Separator = "="
+# 是否将日志内容同步输出到终端
+Stdout = true
+# 打印栈追踪的深度，0表示不追踪调用
+SkipCaller = 0
