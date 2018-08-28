@@ -3,11 +3,15 @@
 ### 实现功能：
 1、log可配置化<br>
 2、输出可根据错误级别自动写入${appname}.log 或者${appname}.log.wf <br>
-3、日志文件可以根据log配置中切割周期、切割数量、保留份数来维护服务器上日志<br>
+3、输出支持输出到命令行终端 <br>
+4、日志文件可以根据log配置中切割周期、切割数量、保留份数来维护服务器上日志<br>
 
 ### 文件目录：
 #### 一、基本属性：
 go-logger/x1/<br>
+|:---|:---|
+|LogId|日志ID|
+|LogLevel|日志级别|
 LogId           日志ID<br>
 LogLevel        日志级别<br>
 LogFormat       日志格式化方式<br>
