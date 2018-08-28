@@ -19,10 +19,15 @@ LogConfig    | 日志配置，维护configPool: 模块名->LogConfig
 
 
 #### 二、基本操作：
-LoggerPool      维护MAP: appname-->Logger<br>
-Logger          维护整个logger对象，通过不同的标识映射不同的LoggerWriter<br>
-LoggerWriter    维护日志的写，具体实现可以文本写，控制台输出等<br>
-LoggerRecord    维护日志每行记录数据<br>
+
+ 文件名    |    说明  
+ -------- |  --------
+LoggerPool  |    维护MAP: appname-->Logger<br>
+Logger      |    维护整个logger对象，通过不同的标识映射不同的LoggerWriter<br>
+LoggerWriter |   维护日志的写，具体实现可以文本写，控制台输出等<br>
+LogWriterTxt |   维护文本写，实现LoggerWriter接口
+LogWriterConsole|维护终端写，实现LoggerWriter接口
+LoggerRecord |   维护日志每行记录数据<br>
 
 #### 三、例子
 ```
