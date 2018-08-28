@@ -7,22 +7,22 @@
 
 ### 文件目录：
 #### 一、基本属性：
-go-logger/x1/
-LogId           日志ID
-LogLevel        日志级别
-LogFormat       日志格式化方式
-LogConfig       日志配置，维护configPool: 模块名->LogConfig
+go-logger/x1/<br>
+LogId           日志ID<br>
+LogLevel        日志级别<br>
+LogFormat       日志格式化方式<br>
+LogConfig       日志配置，维护configPool: 模块名->LogConfig<br>
 
 #### 二、基本操作：
-LoggerPool      维护MAP: appname-->Logger
-Logger          维护整个logger对象，通过不同的标识映射不同的LoggerWriter
-LoggerWriter    维护日志的写，具体实现可以文本写，控制台输出等
-LoggerRecord    维护日志每行记录数据
+LoggerPool      维护MAP: appname-->Logger<br>
+Logger          维护整个logger对象，通过不同的标识映射不同的LoggerWriter<br>
+LoggerWriter    维护日志的写，具体实现可以文本写，控制台输出等<br>
+LoggerRecord    维护日志每行记录数据<br>
 
 #### 三、例子
 ```
-logObj := go_logger.LogInit("demo1")
-logObj.Error("errmsg","xxxdsfd")
+logObj := go_logger.LogInit("demo1")<br>
+logObj.Error("errmsg","xxxdsfd")<br>
 ````
-1、demo1是go-logger/config/log_conf.toml中配置，来初始Logger，无则通过LogConfig完成实例化
-2、调用关系logObj.Error("xxx") --> Logf() --> logObj.Logger.Write(rec LoggerRecord)
+1、demo1是go-logger/config/log_conf.toml中配置，来初始Logger，无则通过LogConfig完成实例化<br>
+2、调用关系logObj.Error("xxx") --> Logf() --> logObj.Logger.Write(rec LoggerRecord)<br>
