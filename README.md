@@ -9,13 +9,12 @@
 ### 文件目录：
 #### 一、基本属性：
 go-logger/x1/<br>
+|文件名|说明|
 |:---|:---|
 |LogId|日志ID|
 |LogLevel|日志级别|
-LogId           日志ID<br>
-LogLevel        日志级别<br>
-LogFormat       日志格式化方式<br>
-LogConfig       日志配置，维护configPool: 模块名->LogConfig<br>
+|LogFormat|日志格式化方式|
+|LogConfig|日志配置，维护configPool: 模块名->LogConfig|
 
 #### 二、基本操作：
 LoggerPool      维护MAP: appname-->Logger<br>
